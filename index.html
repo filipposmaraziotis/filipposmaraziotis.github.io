@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filippos Maraziotis</title>
+<meta name="description" content="Filippos Maraziotis — Assistant Professor of Economics at IQS School of Management, Universitat Ramon Llull. Labor economics, family and gender, and organizational economics.">
+<meta property="og:title" content="Filippos Maraziotis">
+<meta property="og:description" content="Assistant Professor of Economics, IQS School of Management, Universitat Ramon Llull.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://filipposmaraziotis.com/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F8F4EA;
+    --paper-2:#F1EBDB;
+    --ink:#231F18;
+    --ink-soft:#5B5344;
+    --accent:#35543F;        /* dark pine green */
+    --accent-deep:#284030;
+    --rule:rgba(35,31,24,.14);
+    --c-labor:#8A5A2B;   /* Gender, Family & Labor */
+    --c-ai:#33566B;      /* Organizational Economics & AI */
+    --c-cross:#586B45;   /* Cross-disciplinary */
+    --col:44rem;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-padding-top:5rem;}
+  @media (prefers-reduced-motion: no-preference){
+    html{scroll-behavior:smooth;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    font-size:1.15rem;
+    line-height:1.62;
+    font-optical-sizing:auto;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-optical-sizing:auto;}
+  a{color:var(--accent);text-decoration:none;}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:50;}
+  .skip:focus{left:1rem;top:1rem;}
+
+  /* ---- Header ---- */
+  header.bar{
+    position:sticky;top:0;z-index:20;
+    background:rgba(248,244,234,.86);
+    backdrop-filter:saturate(120%) blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .bar-inner{
+    max-width:var(--col);margin:0 auto;padding:.85rem 1.5rem;
+    display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  }
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;letter-spacing:-.01em;color:var(--ink);}
+  nav.top{display:flex;gap:1.35rem;align-items:baseline;flex-wrap:wrap;}
+  nav.top a{
+    color:var(--ink-soft);font-size:1rem;
+    padding-bottom:2px;border-bottom:1.5px solid transparent;
+    transition:color .18s ease,border-color .18s ease;
+  }
+  nav.top a:hover{color:var(--ink);}
+  nav.top a.active{color:var(--ink);border-color:var(--accent);}
+
+  /* ---- Layout ---- */
+  main{max-width:var(--col);margin:0 auto;padding:0 1.5rem;}
+  section{padding:3.4rem 0;border-top:1px solid var(--rule);}
+  section:first-of-type{border-top:none;}
+  .eyebrow{
+    font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.6rem,3.4vw,2.1rem);
+    margin:0 0 1.8rem;letter-spacing:-.01em;line-height:1.1;
+  }
+
+  /* ---- Hero ---- */
+  .hero{padding-top:3.6rem;padding-bottom:3.4rem;}
+  .hero h1{
+    font-size:clamp(2.9rem,7.2vw,4.9rem);
+    line-height:1.0;margin:0 0 1.1rem;letter-spacing:-.02em;font-weight:600;
+  }
+  .role{font-size:1.18rem;line-height:1.5;color:var(--ink-soft);margin:0 0 2rem;}
+  .role strong{color:var(--ink);font-weight:500;}
+  .hero-grid{display:flex;gap:2.2rem;align-items:flex-start;}
+  .hero-grid .bio{flex:1 1 auto;min-width:0;}
+  .bio p{margin:0 0 1rem;}
+  .bio p:first-child{font-size:1.28rem;line-height:1.55;}
+
+  .portrait{flex:0 0 168px;margin:.3rem 0 0;}
+  .portrait img,.portrait .fallback{
+    width:168px;height:206px;object-fit:cover;
+    border:1px solid var(--rule);border-radius:2px;background:var(--paper-2);
+    filter:saturate(.92);
+  }
+  .portrait .fallback{
+    display:none;align-items:center;justify-content:center;
+    font-family:"Fraunces",serif;font-size:3.4rem;color:var(--ink-soft);
+  }
+
+  .links-row{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.6rem;font-size:1.02rem;}
+  .links-row a{position:relative;border-bottom:1px solid rgba(53,84,63,.35);padding-bottom:1px;transition:border-color .18s ease;}
+  .links-row a:hover{border-color:var(--accent);}
+
+  /* ---- Research (collapsible topics) ---- */
+  details.theme{border-top:1px solid var(--rule);}
+  details.theme:first-of-type{border-top:none;}
+  summary.theme-head{
+    list-style:none;display:flex;align-items:center;gap:.6rem;
+    cursor:pointer;padding:1.15rem 0;
+  }
+  summary.theme-head::-webkit-details-marker{display:none;}
+  summary.theme-head:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+  summary.theme-head h3{font-size:1.5rem;margin:0;letter-spacing:-.01em;transition:color .18s ease;}
+  summary.theme-head:hover h3{color:var(--accent);}
+  .dot{width:.62rem;height:.62rem;border-radius:50%;flex:0 0 auto;}
+  .chev{
+    width:.58rem;height:.58rem;margin-left:auto;
+    border-right:2px solid var(--ink-soft);border-bottom:2px solid var(--ink-soft);
+    transform:rotate(45deg);transition:transform .2s ease;
+  }
+  details[open] > summary .chev{transform:rotate(-135deg);}
+  .theme-body{padding:0 0 1.9rem;}
+  @media (prefers-reduced-motion: no-preference){
+    details[open] .theme-body{animation:reveal .28s ease;}
+    @keyframes reveal{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:none;}}
+  }
+
+  .sublabel{
+    font-family:"Fraunces",serif;font-style:italic;font-weight:500;
+    font-size:1.05rem;color:var(--ink-soft);margin:1.5rem 0 .9rem;
+  }
+  .theme-body > .sublabel:first-child{margin-top:.2rem;}
+  .entry{padding:1.15rem 0;border-top:1px solid var(--rule);}
+  .sublabel + .entry{border-top:none;}
+  .entry .title{font-family:"Fraunces",serif;font-weight:600;font-size:1.24rem;line-height:1.24;margin:0 0 .35rem;color:var(--ink);}
+  .entry .meta{color:var(--ink-soft);font-size:1.04rem;line-height:1.5;margin:0;}
+  .entry .meta a{border-bottom:1px solid rgba(53,84,63,.3);}
+  .entry .meta a:hover{border-color:var(--accent);}
+  .entry .flag{font-style:italic;}
+  .entry .actions{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;margin-top:.55rem;font-size:.98rem;}
+  .entry .actions a{border-bottom:1px solid rgba(53,84,63,.35);padding-bottom:1px;}
+  .entry .actions a:hover{border-color:var(--accent);}
+  .ext::after{content:"\2197";font-size:.78em;margin-left:.18em;vertical-align:.05em;opacity:.7;}
+
+  /* ---- Teaching ---- */
+  .hea{font-size:1.24rem;line-height:1.4;margin:0 0 .3rem;font-family:"Fraunces",serif;font-weight:500;}
+  .hea-sub{color:var(--ink-soft);margin:0 0 2rem;font-style:italic;}
+  .course-block{margin-bottom:1.8rem;}
+  .course-block h3{font-size:1.18rem;margin:0 0 .7rem;font-weight:600;}
+  .courses{list-style:none;margin:0;padding:0;columns:2;column-gap:2.4rem;}
+  .courses li{padding:.2rem 0;break-inside:avoid;color:var(--ink);}
+  .courses li::before{content:"\2014";color:var(--c-labor);margin-right:.55rem;}
+
+  /* ---- CV ---- */
+  .timeline{list-style:none;margin:0 0 2rem;padding:0;}
+  .timeline li{display:flex;gap:1.3rem;padding:.7rem 0;border-top:1px solid var(--rule);}
+  .timeline li:first-child{border-top:none;}
+  .timeline .yr{flex:0 0 6.5rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;}
+  .timeline .what{flex:1 1 auto;}
+  .timeline .what strong{font-weight:500;}
+  .timeline .what span{display:block;color:var(--ink-soft);font-size:1rem;}
+  .cv-btn{
+    display:inline-block;font-family:"Fraunces",serif;font-size:1.05rem;
+    color:var(--paper);background:var(--accent-deep);
+    padding:.6rem 1.3rem;border-radius:2px;transition:background .18s ease;
+  }
+  .cv-btn:hover{background:var(--ink);}
+  .cv-btn.ext::after{color:var(--paper);opacity:.85;}
+
+  /* ---- Footer ---- */
+  footer{border-top:1px solid var(--rule);margin-top:1rem;}
+  .foot-inner{max-width:var(--col);margin:0 auto;padding:2.6rem 1.5rem 3.4rem;color:var(--ink-soft);font-size:1.02rem;}
+  .foot-inner .fname{font-family:"Fraunces",serif;color:var(--ink);font-size:1.2rem;font-weight:600;margin:0 0 .3rem;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1rem;}
+  .foot-links a{border-bottom:1px solid rgba(53,84,63,.35);padding-bottom:1px;}
+
+  /* ---- Responsive ---- */
+  @media (max-width:640px){
+    body{font-size:1.08rem;}
+    .hero-grid{flex-direction:column-reverse;gap:1.4rem;}
+    .portrait{flex-basis:auto;}
+    .portrait img,.portrait .fallback{width:132px;height:162px;}
+    .courses{columns:1;}
+    .timeline li{flex-direction:column;gap:.15rem;}
+    .timeline .yr{flex-basis:auto;}
+    nav.top{gap:1rem;}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="bar-inner">
+    <span class="brand">Filippos Maraziotis</span>
+    <nav class="top" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#cv">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO / ABOUT ============ -->
+  <section id="about" class="hero" style="border-top:none;">
+    <h1>Filippos Maraziotis</h1>
+    <p class="role">
+      <strong>Assistant Professor of Economics</strong><br>
+      Department of Economics and Finance, IQS School of Management<br>
+      Universitat Ramon Llull · Barcelona
+    </p>
+
+    <div class="hero-grid">
+      <div class="bio">
+        <p>I am a microeconomist working in labor economics — spanning family and gender — and in organizational economics. My current work also examines how artificial intelligence is reshaping judgment and decision-making inside firms.</p>
+        <p>Before joining IQS, I was a Postdoctoral Research Fellow at the University of York (July 2023 – August 2025), where I also completed my PhD in Economics (May 2023).</p>
+
+        <div class="links-row">
+          <a href="mailto:filippos.maraziotis@iqs.url.edu">filippos.maraziotis@iqs.url.edu</a>
+          <a class="ext" href="https://scholar.google.com/citations?user=L4Dh3S0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="ext" href="https://www.linkedin.com/in/filippos-maraziotis/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="ext" href="https://iqs.edu/en/iqs/human-team/dr-filippos-maraziotis/" target="_blank" rel="noopener">IQS profile</a>
+        </div>
+      </div>
+
+      <!-- To add your photo: drop a file named portrait.jpg next to this page.
+           Until then, an "FM" monogram shows automatically. -->
+      <figure class="portrait" style="margin:.3rem 0 0;">
+        <img src="portrait.jpg" alt="Filippos Maraziotis"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="fallback" aria-hidden="true">FM</div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research">
+    <h2 class="eyebrow">Research</h2>
+
+    <!-- Theme 1 -->
+    <details class="theme" open>
+      <summary class="theme-head">
+        <span class="dot" style="background:var(--c-labor);"></span>
+        <h3>Gender, Family &amp; Labor</h3>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="theme-body">
+        <p class="sublabel">Published &amp; forthcoming</p>
+
+        <article class="entry">
+          <p class="title">To be (worried) or not to be? The impact of minimum wage increases on aggregate prices</p>
+          <p class="meta">With <a class="ext" href="https://sites.google.com/view/fikretbilenkisi/home" target="_blank" rel="noopener">Fikret Bilenkisi</a> and <a class="ext" href="https://sites.google.com/view/makifyardimci/" target="_blank" rel="noopener">M. A. Yardimci</a>. <em>Economic Analysis and Policy</em>, 2026.</p>
+          <div class="actions">
+            <a class="ext" href="https://doi.org/10.1016/j.eap.2026.05.008" target="_blank" rel="noopener">Published version</a>
+            <a class="ext" href="https://faculti.net/to-be-worried-or-not-to-be-an-empirical-analysis-of-minimum-wage-and-inflation-during-the-post-covid-era" target="_blank" rel="noopener">Faculti interview</a>
+            <a class="ext" href="https://www.york.ac.uk/policy-engine/eventsandopportunities/archive/departmentforworkandpensionsdwplinkseminarseries/" target="_blank" rel="noopener">DWP LINK seminar</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="title">When she works more than her partner: gender norms and women's life satisfaction in Australia</p>
+          <p class="meta"><em>Work, Employment and Society</em>, 2026.</p>
+          <div class="actions">
+            <a class="ext" href="https://doi.org/10.1177/09500170261424128" target="_blank" rel="noopener">Published version</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="title">Flexibility for equality: flexible working-time arrangements and women's convergence in working hours</p>
+          <p class="meta"><em>British Journal of Industrial Relations</em>, 62(2), 410–445, 2024. <span class="flag" style="color:var(--c-labor);">Top-ranked nominee, Kanter Award (2025).</span></p>
+          <div class="actions">
+            <a class="ext" href="https://doi.org/10.1111/bjir.12787" target="_blank" rel="noopener">Published version</a>
+            <a class="ext" href="https://centers.purdue.edu/cff/initiatives/kanteraward/nominees/#_2025" target="_blank" rel="noopener">Kanter Award</a>
+          </div>
+        </article>
+
+        <p class="sublabel">Working papers</p>
+        <article class="entry">
+          <p class="title">Does money move fathers? Financial incentives and paternity leave take-up</p>
+          <p class="meta">With <a class="ext" href="https://sites.google.com/view/makifyardimci/" target="_blank" rel="noopener">M. A. Yardimci</a>.</p>
+        </article>
+
+        <p class="sublabel">Ongoing work</p>
+        <article class="entry">
+          <p class="title">Partnering for career success? The wage effects of couples' occupational linkage</p>
+        </article>
+      </div>
+    </details>
+
+    <!-- Theme 2 -->
+    <details class="theme">
+      <summary class="theme-head">
+        <span class="dot" style="background:var(--c-ai);"></span>
+        <h3>Organizational Economics &amp; AI</h3>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="theme-body">
+        <p class="sublabel">Working papers</p>
+        <article class="entry">
+          <p class="title">AI and the reproduction of judgment</p>
+          <p class="meta">With <a class="ext" href="https://sites.google.com/view/fikretbilenkisi/home" target="_blank" rel="noopener">Fikret Bilenkisi</a> and <a class="ext" href="https://sites.google.com/site/ramonxifre2/alternativa_home" target="_blank" rel="noopener">Ramon Xifré</a>.</p>
+        </article>
+      </div>
+    </details>
+
+    <!-- Theme 3 -->
+    <details class="theme">
+      <summary class="theme-head">
+        <span class="dot" style="background:var(--c-cross);"></span>
+        <h3>Cross-disciplinary</h3>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="theme-body">
+        <p class="sublabel">Published</p>
+        <article class="entry">
+          <p class="title">Drawing academic freedom: a field of tension between decent and precarious working conditions among fixed-term academics</p>
+          <p class="meta">With <a class="ext" href="https://pure.ul.ie/en/persons/suzanne-couloigner/" target="_blank" rel="noopener">Suzanne Couloigner</a>, <a class="ext" href="https://orcid.org/0000-0003-3621-4492" target="_blank" rel="noopener">V. A. Perez Moraga</a> and <a class="ext" href="https://www.sheffield.ac.uk/management/people/academic-staff/esib/ian-jones" target="_blank" rel="noopener">Ian G. Jones</a>. <em>Organization</em>, 2026.</p>
+          <div class="actions">
+            <a class="ext" href="https://doi.org/10.1177/13505084261444675" target="_blank" rel="noopener">Published version</a>
+          </div>
+        </article>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ TEACHING ============ -->
+  <section id="teaching">
+    <h2 class="eyebrow">Teaching</h2>
+    <p class="hea">Fellow of the Higher Education Academy (HEA)</p>
+    <p class="hea-sub">Supporting effective, evidence-based teaching and student learning in higher education.</p>
+
+    <div class="course-block">
+      <h3>2025–26 · IQS School of Management</h3>
+      <ul class="courses">
+        <li>The Global Economy and the 4.0</li>
+        <li>Global Digital Economics</li>
+        <li>Microeconomics</li>
+      </ul>
+    </div>
+
+    <div class="course-block">
+      <h3>2023–25 · University of York</h3>
+      <ul class="courses">
+        <li>Quantitative Methods</li>
+        <li>Research Methods of Dissertation</li>
+        <li>Business Economics</li>
+        <li>Applied Economics</li>
+        <li>Econometrics</li>
+        <li>Microeconomics</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CV ============ -->
+  <section id="cv">
+    <h2 class="eyebrow">Curriculum vitae</h2>
+    <ul class="timeline">
+      <li>
+        <span class="yr">2025 –</span>
+        <span class="what"><strong>Assistant Professor of Economics</strong><span>IQS School of Management, Universitat Ramon Llull</span></span>
+      </li>
+      <li>
+        <span class="yr">2023 – 25</span>
+        <span class="what"><strong>Postdoctoral Research Fellow</strong><span>University of York</span></span>
+      </li>
+      <li>
+        <span class="yr">2023</span>
+        <span class="what"><strong>PhD in Economics</strong><span>University of York</span></span>
+      </li>
+    </ul>
+    <!-- Replace cv.pdf with your actual file, placed next to this page. -->
+    <a class="cv-btn ext" href="cv.pdf" target="_blank" rel="noopener">Download full CV</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <p class="fname">Filippos Maraziotis</p>
+    <p style="margin:0;">Assistant Professor of Economics · IQS School of Management, Universitat Ramon Llull</p>
+    <p style="margin:.2rem 0 0;"><a href="mailto:filippos.maraziotis@iqs.url.edu">filippos.maraziotis@iqs.url.edu</a></p>
+    <div class="foot-links">
+      <a class="ext" href="https://scholar.google.com/citations?user=L4Dh3S0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="ext" href="https://www.linkedin.com/in/filippos-maraziotis/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="ext" href="https://iqs.edu/en/iqs/human-team/dr-filippos-maraziotis/" target="_blank" rel="noopener">IQS profile</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Highlight the current section in the top navigation.
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav.top a'));
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+    var sections = links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+    if(!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          if(map[e.target.id]) map[e.target.id].classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    sections.forEach(function(s){ obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
