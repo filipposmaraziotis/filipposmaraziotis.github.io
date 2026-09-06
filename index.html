@@ -92,18 +92,19 @@
   .role strong{color:var(--ink);font-weight:500;}
   .hero-grid{display:flex;gap:2.2rem;align-items:flex-start;}
   .hero-grid .bio{flex:1 1 auto;min-width:0;}
-  .bio p{margin:0 0 1rem;}
+  .bio p{margin:0 0 1rem;text-align:justify;}
   .bio p:first-child{font-size:1.28rem;line-height:1.55;}
 
-  .portrait{flex:0 0 168px;margin:.3rem 0 0;}
+  .portrait{margin:2rem 0 1.4rem;text-align:center;}
   .portrait img,.portrait .fallback{
-    width:168px;height:206px;object-fit:cover;
+    width:208px;height:252px;object-fit:cover;
     border:1px solid var(--rule);border-radius:2px;background:var(--paper-2);
     filter:saturate(.92);
+    display:block;margin:0 auto;
   }
   .portrait .fallback{
     display:none;align-items:center;justify-content:center;
-    font-family:"Fraunces",serif;font-size:3.4rem;color:var(--ink-soft);
+    font-family:"Fraunces",serif;font-size:4.2rem;color:var(--ink-soft);
   }
 
   .links-row{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.6rem;font-size:1.02rem;}
@@ -141,7 +142,7 @@
   .theme-body > .sublabel:first-child{margin-top:.2rem;}
   .entry{padding:1.15rem 0;border-top:1px solid var(--rule);}
   .sublabel + .entry{border-top:none;}
-  .entry .title{font-family:"Fraunces",serif;font-weight:600;font-size:1.24rem;line-height:1.24;margin:0 0 .35rem;color:var(--ink);}
+  .entry .title{font-family:"Fraunces",serif;font-weight:600;font-size:1.12rem;line-height:1.24;margin:0 0 .35rem;color:var(--ink);}
   .entry .meta{color:var(--ink-soft);font-size:1.04rem;line-height:1.5;margin:0;}
   .entry .meta a{border-bottom:1px solid rgba(53,84,63,.3);}
   .entry .meta a:hover{border-color:var(--accent);}
@@ -187,9 +188,7 @@
   /* ---- Responsive ---- */
   @media (max-width:640px){
     body{font-size:1.08rem;}
-    .hero-grid{flex-direction:column-reverse;gap:1.4rem;}
-    .portrait{flex-basis:auto;}
-    .portrait img,.portrait .fallback{width:132px;height:162px;}
+    .portrait img,.portrait .fallback{width:180px;height:218px;}
     .courses{columns:1;}
     .timeline li{flex-direction:column;gap:.15rem;}
     .timeline .yr{flex-basis:auto;}
@@ -223,26 +222,24 @@
       Universitat Ramon Llull · Barcelona
     </p>
 
-    <div class="hero-grid">
-      <div class="bio">
-        <p>I am a microeconomist working in labor economics — spanning family and gender — and in organizational economics. My current work also examines how artificial intelligence is reshaping judgment and decision-making inside firms.</p>
-        <p>Before joining IQS, I was a Postdoctoral Research Fellow at the University of York (July 2023 – August 2025), where I also completed my PhD in Economics (May 2023).</p>
+    <!-- To add your photo: drop a file named portrait.jpeg next to this page.
+         Until then, an "FM" monogram shows automatically. -->
+    <figure class="portrait">
+      <img src="portrait.jpeg" alt="Filippos Maraziotis"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="fallback" aria-hidden="true">FM</div>
+    </figure>
 
-        <div class="links-row">
-          <a href="mailto:filippos.maraziotis@iqs.url.edu">filippos.maraziotis@iqs.url.edu</a>
-          <a class="ext" href="https://scholar.google.com/citations?user=L4Dh3S0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="ext" href="https://www.linkedin.com/in/filippos-maraziotis/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="ext" href="https://iqs.edu/en/iqs/human-team/dr-filippos-maraziotis/" target="_blank" rel="noopener">IQS profile</a>
-        </div>
+    <div class="bio">
+      <p>I am an economist with a broad interest in work and employment. Most of my research is in labor economics, with particular attention to its intersection with family and gender — how families and labor markets shape careers, working time, and the way couples divide work. More recently, I have become interested in the economic transformations of artificial intelligence: how organizations redesign their workflows, and how expertise and frontier knowledge are reproduced within firms and societies.</p>
+      <p>Before joining IQS, I was a Postdoctoral Research Fellow at the University of York (July 2023 – August 2025), where I also completed my PhD in Economics (May 2023).</p>
+
+      <div class="links-row">
+        <a href="mailto:filippos.maraziotis@iqs.url.edu">filippos.maraziotis@iqs.url.edu</a>
+        <a class="ext" href="https://scholar.google.com/citations?user=L4Dh3S0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="ext" href="https://www.linkedin.com/in/filippos-maraziotis/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="ext" href="https://iqs.edu/en/iqs/human-team/dr-filippos-maraziotis/" target="_blank" rel="noopener">IQS profile</a>
       </div>
-
-      <!-- To add your photo: drop a file named portrait.jpeg next to this page.
-           Until then, an "FM" monogram shows automatically. -->
-      <figure class="portrait" style="margin:.3rem 0 0;">
-        <img src="portrait.jpeg" alt="Filippos Maraziotis"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="fallback" aria-hidden="true">FM</div>
-      </figure>
     </div>
   </section>
 
@@ -310,6 +307,19 @@
         <article class="entry">
           <p class="title">AI and the reproduction of judgment</p>
           <p class="meta">With <a class="ext" href="https://sites.google.com/view/fikretbilenkisi/home" target="_blank" rel="noopener">Fikret Bilenkisi</a> and <a class="ext" href="https://sites.google.com/site/ramonxifre2/alternativa_home" target="_blank" rel="noopener">Ramon Xifré</a>.</p>
+          <div class="actions">
+            <a class="ext" href="https://dx.doi.org/10.2139/ssrn.7387898" target="_blank" rel="noopener">SSRN</a>
+          </div>
+        </article>
+
+        <p class="sublabel">Ongoing work</p>
+        <article class="entry">
+          <p class="title">AI, workflow compression, and organizational capability</p>
+          <p class="meta">With <a class="ext" href="https://sites.google.com/site/ramonxifre2/alternativa_home" target="_blank" rel="noopener">Ramon Xifré</a>.</p>
+        </article>
+        <article class="entry">
+          <p class="title">AI deployment, human investment, and the bootstrap to machine research</p>
+          <p class="meta">With <a class="ext" href="https://sites.google.com/view/fikretbilenkisi/home" target="_blank" rel="noopener">Fikret Bilenkisi</a>.</p>
         </article>
       </div>
     </details>
