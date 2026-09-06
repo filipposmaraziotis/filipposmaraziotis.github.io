@@ -63,15 +63,15 @@
     max-width:var(--col);margin:0 auto;padding:.85rem 1.5rem;
     display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   }
-  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;letter-spacing:-.01em;color:var(--ink);}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;letter-spacing:-.01em;color:var(--accent);}
   nav.top{display:flex;gap:1.35rem;align-items:baseline;flex-wrap:wrap;}
   nav.top a{
-    color:var(--ink-soft);font-size:1rem;
+    color:var(--accent);font-size:1rem;
     padding-bottom:2px;border-bottom:1.5px solid transparent;
     transition:color .18s ease,border-color .18s ease;
   }
-  nav.top a:hover{color:var(--ink);}
-  nav.top a.active{color:var(--ink);border-color:var(--accent);}
+  nav.top a:hover{color:var(--accent-deep);}
+  nav.top a.active{color:var(--accent-deep);border-color:var(--accent);}
 
   /* ---- Layout ---- */
   main{max-width:var(--col);margin:0 auto;padding:0 1.5rem;}
@@ -79,7 +79,7 @@
   section:first-of-type{border-top:none;}
   .eyebrow{
     font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.6rem,3.4vw,2.1rem);
-    margin:0 0 1.8rem;letter-spacing:-.01em;line-height:1.1;
+    margin:0 0 1.8rem;letter-spacing:-.01em;line-height:1.1;color:var(--accent);
   }
 
   /* ---- Hero ---- */
@@ -154,9 +154,10 @@
   /* ---- Teaching ---- */
   .hea{font-size:1.24rem;line-height:1.4;margin:0 0 .3rem;font-family:"Fraunces",serif;font-weight:500;}
   .hea-sub{color:var(--ink-soft);margin:0 0 2rem;font-style:italic;}
-  .course-block{margin-bottom:1.8rem;}
-  .course-block h3{font-size:1.18rem;margin:0 0 .7rem;font-weight:600;}
-  .courses{list-style:none;margin:0;padding:0;columns:2;column-gap:2.4rem;}
+  .course-block{margin-bottom:2rem;}
+  .course-block h3{font-size:1.18rem;margin:0 0 .3rem;font-weight:600;}
+  .level{font-family:"Fraunces",serif;font-style:italic;font-weight:500;font-size:1rem;color:var(--ink-soft);margin:.9rem 0 .35rem;}
+  .courses{list-style:none;margin:0 0 .2rem;padding:0;}
   .courses li{padding:.2rem 0;break-inside:avoid;color:var(--ink);}
   .courses li::before{content:"\2014";color:var(--c-labor);margin-right:.55rem;}
 
@@ -250,10 +251,9 @@
     <h2 class="eyebrow">Research</h2>
 
     <!-- Theme 1 -->
-    <details class="theme" open>
+    <details class="theme">
       <summary class="theme-head">
-        <span class="dot" style="background:var(--c-labor);"></span>
-        <h3>Gender, Family &amp; Labor</h3>
+        <h3>Labor, Family and Gender</h3>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="theme-body">
@@ -302,8 +302,7 @@
     <!-- Theme 2 -->
     <details class="theme">
       <summary class="theme-head">
-        <span class="dot" style="background:var(--c-ai);"></span>
-        <h3>Organizational Economics &amp; AI</h3>
+        <h3>Economics of AI</h3>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="theme-body">
@@ -318,7 +317,6 @@
     <!-- Theme 3 -->
     <details class="theme">
       <summary class="theme-head">
-        <span class="dot" style="background:var(--c-cross);"></span>
         <h3>Cross-disciplinary</h3>
         <span class="chev" aria-hidden="true"></span>
       </summary>
@@ -338,20 +336,24 @@
   <!-- ============ TEACHING ============ -->
   <section id="teaching">
     <h2 class="eyebrow">Teaching</h2>
-    <p class="hea">Fellow of the Higher Education Academy (HEA)</p>
-    <p class="hea-sub">Supporting effective, evidence-based teaching and student learning in higher education.</p>
-
     <div class="course-block">
       <h3>2025–26 · IQS School of Management</h3>
+      <p class="level">Undergraduate</p>
       <ul class="courses">
         <li>The Global Economy and the 4.0</li>
         <li>Global Digital Economics</li>
         <li>Microeconomics</li>
       </ul>
+      <p class="level">Master's &amp; PhD</p>
+      <ul class="courses">
+        <li>Microeconomics</li>
+        <li>Academic Writing and Presenting</li>
+      </ul>
     </div>
 
     <div class="course-block">
       <h3>2023–25 · University of York</h3>
+      <p class="level">Undergraduate</p>
       <ul class="courses">
         <li>Quantitative Methods</li>
         <li>Research Methods of Dissertation</li>
@@ -359,6 +361,10 @@
         <li>Applied Economics</li>
         <li>Econometrics</li>
         <li>Microeconomics</li>
+      </ul>
+      <p class="level">Master's</p>
+      <ul class="courses">
+        <li>Strategic Management</li>
       </ul>
     </div>
   </section>
